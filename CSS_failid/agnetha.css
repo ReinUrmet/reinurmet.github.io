@@ -1,0 +1,98 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #ffe6f2; /* Soft pink background */
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* Header Section */
+  .hero {
+    background: linear-gradient(to bottom, #ff80b3, #ff4d94); /* Gradient pink */
+    color: white;
+    padding: 50px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+  }
+  
+  /* About Section */
+  .content {
+    margin: 20px auto;
+    max-width: 800px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .about h2,
+  .details h2,
+  .gallery h2 {
+    font-size: 2rem;
+    color: #ff4d94;
+    margin-bottom: 10px;
+  }
+  
+  .about p,
+  .details ul {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+  
+  .details ul {
+    list-style-type: disc;
+    text-align: left;
+    margin: 0 auto;
+    display: inline-block;
+  }
+  
+  .details li {
+    margin: 5px 0;
+  }
+  
+  /* Gallery Section */
+  .gallery .images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .gallery img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .gallery p {
+    margin-bottom: 10px;
+  }
+  
+  /* Footer */
+  footer {
+    margin-top: 20px;
+    padding: 10px;
+    background: #ff80b3;
+    color: white;
+    border-radius: 10px;
+  }
+  

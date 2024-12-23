@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Rein Urmet</title>
+    <link rel="stylesheet" href="../CSS_failid\styles.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li class="nav_left">
+                    <a href="index.html"><img src="../pildid/logo.png" alt="Logo"></a>
+                </li>
+        
+                <!-- Hamburger menu button for mobile -->
+                <li class="hamburger">
+                    &#9776; <!-- Unicode for the hamburger icon -->
+                </li>
+        
+                <div class="nav_right">
+                    <li><a href="#projects">PROJECTS</a></li>
+                    <li><a href="#about-me">ABOUT ME</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </div>
+            </ul>
+        </nav>        
+    </header>
+
+    <section class="banner">
+        <div class="content">
+            <h1 class="title">Hi, I'm Rein Urmet!</h1>
+            <p>
+                A Computer Science student, avid reader, and sports enthusiast. 
+                When I'm not coding or learning, you'll find me playing beach volleyball, training MMA, or diving into a great book.
+            </p>
+            <div class="buttons">
+                <a href="#about-me" class="btn">Learn More About Me</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2 class="title">Portfolio</h2>
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+            <button class="btn" onclick="filterSelection('websites')"> Websites</button>
+            <button class="btn" onclick="filterSelection('games')"> Games</button>
+            <button class="btn" onclick="filterSelection('other')"> Other</button>
+        </div>
+        
+        <div class="portfolio_items">
+            <div class="column websites">
+                <div class="content">
+                    <img src="../pildid/Minesweeper.png" alt="Minesweeper Website">
+                    <h4 class="title">Minesweeper Website</h4>
+                    <a href="projektide_html/minesweeper.html" class="btn btn-secondary">Read More</a>
+                </div>
+            </div>
+
+            <div class="column games">
+                <div class="content">
+                    <img src="../pildid/rocket_boost.png" alt="Rocket Boost">
+                    <h4 class="title">Rocket Boost</h4>
+                    <a href="projektide_html/rocketboost.html" class="btn btn-secondary">Read More</a>
+                </div>
+            </div>
+            <div class="column games">
+                <div class="content">
+                    <img src="../pildid/pygame_mäng.png" alt="Mikro">
+                    <h4 class="title">Mikro</h4>
+                    <a href="projektide_html/mikro.html" class="btn btn-secondary">Read More</a>
+                </div>
+            </div>
+            <div class="column games">
+                <div class="content">
+                    <img src="../pildid/object_dodge.png" alt="Object Dodge">
+                    <h4 class="title">Object Dodge</h4>
+                    <a href="projektide_html/objektDodge.html" class="btn btn-secondary">Read More</a>
+                </div>
+            </div>
+
+            <div class="column other">
+                <div class="content">
+                    <img src="../pildid/RaspberryPiValgusfoor.jpeg" alt="Raspberry Pi Traffic Light">
+                    <h4 class="title">Raspberry Pi Traffic Light</h4>
+                    <a href="about.html" class="btn btn-secondary">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about-me" class="about_me">
+        <h2 class="title">About Me</h2>
+        <article class="about_me_main">
+            <div class="left_side">
+            <p>   
+                I am a first-year Computer Science student driven by a passion for continuous self-improvement and optimization. Beyond my academic pursuits, I stay active through MMA training and beach volleyball, a sport I particularly enjoy as my girlfriend <a href="agnetha.html">Agnetha</a> plays professionally for TalTech. These activities not only fuel my enthusiasm but also enhance my focus, discipline, and resilience—traits I carry into my studies and projects.
+              </p>
+              <p>
+                I’m currently diving deeper into cybersecurity, with plans to specialize in the field in the future. At the
+                same time, I’m exploring front-end web development and game development using Unity and Pygame, applying my
+                creativity and technical skills to build exciting projects.
+              </p>
+              <h3>Programming Languages:</h3>
+              <ul class="programming_languages">
+                <li>
+                    <div class="popup" onclick="myFunction(this)">
+                        <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python Icon">
+                        <span class="popuptext">PYTHON</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="popup" onclick="myFunction(this)">
+                        <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML Icon">
+                        <span class="popuptext">HTML</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="popup" onclick="myFunction(this)">
+                        <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS Icon">
+                        <span class="popuptext">CSS</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="popup" onclick="myFunction(this)">
+                        <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript Icon">
+                        <span class="popuptext">JavaScript</span>
+                    </div>
+                </li>
+            </ul>            
+                <p>Want to find out more about my qualifications, check out my CV:</p>
+                <button class="download-btn" onclick="downloadCV()">Download My CV</button>
+            </div>
+            <div class="right_side">
+                <img src="../pildid/Mina_Itaalias.jpg" alt="Picture of me">
+            </div>
+        </article>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 class="title">Contact Me</h2>
+        <form action="your_form_handler_url" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+          <!-- Contact Information -->
+          <p>© 2024 Rein Urmet. All rights reserved.</p>
+          <p>📍 Tartu, Estonia | 📧 <a href="mailto:rein.urmet@gmail.com">rein.urmet@gmail.com</a></p>
+      
+          <!-- Social Links -->
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/reinurmet/" target="_blank">
+              <img src="https://img.icons8.com/ios-glyphs/30/ffffff/instagram-new.png" alt="Instagram" />
+            </a>
+            <a href="https://github.com/ReinUrmet" target="_blank">
+              <img src="https://img.icons8.com/ios-glyphs/30/ffffff/github.png" alt="GitHub" />
+            </a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank">
+              <img src="https://img.icons8.com/ios-glyphs/30/ffffff/linkedin.png" alt="LinkedIn" />
+            </a>
+          </div>
+      
+          <!-- Call to Action -->
+          <p>Looking for a Software developement enthusiast? <a href="#contact">Let’s connect!</a></p>
+      
+          <!-- Back to Top Button -->
+          <div class="back-to-top">
+            <a href="#top">⬆ Back to Top</a>
+          </div>
+        </div>
+      </footer>
+
+    <script src="../java.js"></script>
+</body>
+</html>
