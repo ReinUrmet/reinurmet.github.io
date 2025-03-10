@@ -110,7 +110,14 @@ function myFunction(element) {
     }
 }
 
-//CV DOWNLOAD
-function downloadCV() {
-    window.location.href = "path-to-your-cv.pdf"; // Replace with your CV file path
-  }
+  //Contact form errori selgitus:
+  document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.querySelector('#contact form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert("I'm sorry, the contact form is currently not working due to my site being hosted on GitHub Pages.");
+      });
+    }
+  });
+  
