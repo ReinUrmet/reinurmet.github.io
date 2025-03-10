@@ -6,7 +6,7 @@ let navLinks = document.querySelectorAll("header nav a");
 window.onscroll = () => {
     sections.forEach((sec) => {
         let top = window.scrollY;
-        let offset = sec.offsetTop; // No need to adjust for navbar height
+        let offset = sec.offsetTop; 
         let height = sec.offsetHeight;
         let id = sec.getAttribute("id");
 
@@ -21,7 +21,7 @@ window.onscroll = () => {
     });
 };
 
-//NAV BURGER MENU
+//NAV burgerr
 const hamburger = document.querySelector('.hamburger');
 const navRight = document.querySelector('.nav_right');
 
@@ -114,43 +114,3 @@ function myFunction(element) {
 function downloadCV() {
     window.location.href = "path-to-your-cv.pdf"; // Replace with your CV file path
   }
-
-
-
-//CONTACTS
-//
-//
-// JavaScript for Contact Form Validation and Submission
-document.addEventListener("DOMContentLoaded", () => {
-    const form = document.querySelector(".contact form");
-    const inputs = form.querySelectorAll("input, textarea");
-    const nameField = form.querySelector('input[name="name"]');
-    const emailField = form.querySelector('input[name="email"]');
-    const messageField = form.querySelector('textarea[name="message"]');
-
-    form.addEventListener("submit", (e) => {
-        e.preventDefault(); // Prevent the form from refreshing the page
-
-        // Validate inputs
-        if (!nameField.value.trim() || !emailField.value.trim() || !messageField.value.trim()) {
-            alert("Please fill in all the fields!");
-            return;
-        }
-
-        if (!validateEmail(emailField.value)) {
-            alert("Please enter a valid email address!");
-            return;
-        }
-
-        // If validation passes
-        alert("Your message has been sent successfully!");
-        form.reset(); // Clear the form fields
-    });
-
-    // Email validation function
-    function validateEmail(email) {
-        const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$/;
-        return re.test(email);
-    }
-});
-
